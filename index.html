@@ -1,56 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
 
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    
-    <div id="container">
-      <div id="header">
-        <div id="monthDisplay"></div>
-        <div>
-          <button id="backButton">Back</button>
-          <button id="nextButton">Next</button>
-        </div>
+<head>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--========== HEADER ==========-->
+  <header class="l-header" >
+    <nav class="nav bd-container">
+      <a href="#home" class="nav__logo">Devcation 2022</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link active-link">About</a></li>
+          <li class="nav__item"><a href="#theme" class="nav__link ">Theme</a></li>
+          <li class="nav__item"><a href="#events" class="nav__link">Events</a></li>
+          <li class="nav__item"><a href="#timeline" class="nav__link">Timeline</a></li>
+          <li class="nav__item"><a href="#sponsors" class="nav__link">Sponsors</li>
+          <li class="nav__item"><a href="./view/team.html" class="nav__link">Team</a></li>
+          <li class="nav__item"><a href="./view/comingsoon.html" class="nav__link">Projects</a></li>
+          <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+        </ul>
       </div>
 
-      <div id="weekdays">
-        <div>Sunday</div>
-        <div>Monday</div>
-        <div>Tuesday</div>
-        <div>Wednesday</div>
-        <div>Thursday</div>
-        <div>Friday</div>
-        <div>Saturday</div>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bx-grid-alt'></i>
       </div>
+    </nav>
+  </header>
 
-      <div id="calendar"></div>
+  <div id="container">
+    <div id="header">
+      <div id="monthDisplay"></div>
+      <div>
+        <button id="backButton">Back</button>
+        <button id="nextButton">Next</button>
+      </div>
     </div>
 
-    <div id="newEventModal">
-      <h2>New Event</h2>
-
-      <input id="eventTitleInput" placeholder="Event Title" />
-
-      <button id="saveButton">Save</button>
-      <button id="cancelButton">Cancel</button>
+    <div id="weekdays">
+      <div>Sunday</div>
+      <div>Monday</div>
+      <div>Tuesday</div>
+      <div>Wednesday</div>
+      <div>Thursday</div>
+      <div>Friday</div>
+      <div>Saturday</div>
     </div>
 
-    <div id="deleteEventModal">
-      <h2>Event</h2>
+    <div id="calendar"></div>
+  </div>
 
-      <p id="eventText"></p>
+  <div id="newEventModal">
+    <h2>New Event</h2>
 
-      <button id="deleteButton">Delete</button>
-      <button id="closeButton">Close</button>
-    </div>
+    <input id="eventTitleInput" placeholder="Event Title" />
 
-    <div id="modalBackDrop"></div>
+    <button id="saveButton">Save</button>
+    <button id="cancelButton">Cancel</button>
+  </div>
 
-    <script src="./script.js"></script>
-  </body>
+  <div id="deleteEventModal">
+    <h2>Event</h2>
+
+    <p id="eventText"></p>
+
+    <button id="deleteButton">Delete</button>
+    <button id="closeButton">Close</button>
+  </div>
+
+  <div id="modalBackDrop"></div>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
